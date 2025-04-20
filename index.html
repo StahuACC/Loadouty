@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Skopiowano Loadout!</title>
+</head>
+<body style="background-color: #1a1a1a; color: white; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh;">
+  <h1>Kopiowanie loadout’u...</h1>
+  <p>Jeśli nic się nie stało, kliknij CTRL+V, aby wkleić.</p>
+
+<script>
+const tekstDoSkopiowania = `[[["arifle_MX_F","","","",["30Rnd_65x39_caseless_mag",30],[],""],[],[],["U_B_CombatUniform_mcam_worn",[["ACE_elasticBandage",2],["ACE_fieldDressing",2],["ACE_packingBandage",2],["ACE_morphine",1],["ACE_quikclot",2],["kat_guedel",1],["ACE_tourniquet",2],["kat_Pulseoximeter",1]]],["V_PlateCarrierSpec_mtp",[]],["B_Carryall_mcamo",[["kat_IV_16",16],["kat_aatKit",8],["kat_accuvac",1],["ACE_epinephrine",12],["ACE_adenosine",2],["ACE_morphine",5],["ACE_elasticBandage",12],["kat_chestSeal",10],["ACE_fieldDressing",12],["ACE_packingBandage",12],["ACE_quikclot",10],["kat_IO_FAST",5],["kat_naloxone",3],["kat_Pulseoximeter",2],["kat_larynx",12],["ACE_tourniquet",8],["kat_stethoscope",1],["ACE_splint",10],["ACE_surgicalKit",1],["ACE_plasmaIV_500",15],["ACE_salineIV_250",2],["kat_lidocaine",12],["kat_amiodarone",12],["kat_atropine",6],["kat_TXA",1],["kat_AED",1],["kat_Painkiller",2,10],["kat_Carbonate",1,10]]],"H_HelmetB_desert","",[],["ItemMap","","ItemRadioAcreFlagged","ItemCompass","ItemWatch",""]],[]]`;
+
+navigator.clipboard.writeText(tekstDoSkopiowania).then(() => {
+    alert("Loadout skopiowany do schowka!");
+    window.close();
+}).catch(err => {
+    alert("Nie udało się skopiować automatycznie. Skopiuj ręcznie: " + tekstDoSkopiowania);
+});
+</script>
+
+</body>
+</html>
